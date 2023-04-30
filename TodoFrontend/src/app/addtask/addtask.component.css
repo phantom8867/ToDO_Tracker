@@ -1,0 +1,78 @@
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  }
+  
+  li{
+    padding-right: 20px;
+  }
+  #card{
+    background-color: #DAEAF1;
+    overflow: hidden;
+    width:100%;
+    min-height: 580px;
+    
+  }
+  #im1{
+    width:500px;
+    height: 525px;
+    padding-top: 90px;
+  }
+  #but{
+    color: #fff;
+    background-color: #9861c2;
+
+  }
+  #ij{
+    margin-right: 390px;
+    margin-top: -20px;
+  }
+  .up{
+    margin-top: -40px;
+  }
+  #add{
+    margin-top: -30px;
+    padding-left: 240px;
+  }
+  #btn2{
+    position: absolute;
+    margin-top: -500px;
+  
+    margin-right: -420px;
+  }
+
+  @media screen and  (max-width: 1080px){
+
+    #card{
+      background-color: #b4dbec;
+      overflow: hidden;
+      width:auto;
+      height: 580px;
+      display: inline;
+    }
+
+    #but{
+      color: #fff;
+      background-color: #9861c2;
+      
+      margin-right: -180px;
+      position: absolute;
+    }
+
+    #btn2{
+      position: absolute;
+      margin-top: -700px;
+    
+      margin-right: -420px;
+    }
+
+    #add{
+      margin-top: -30px;
+      padding-left: 100px;
+    }
+
+
+  }

@@ -1,0 +1,50 @@
+<app-otp *ngIf="next" [otp]="otp" [email]="email"></app-otp>
+  <div class="head" *ngIf="!next">
+    <div class="container"> 
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../../assets/Avatar/florid-support-service.gif" type="image" id="im1">
+        </div>
+      </div>
+      <div *ngIf="logins">
+        <div class="loginbox">
+          <h1>Login</h1>
+            <form (ngSubmit)="login()" [formGroup]="log">
+              <div>
+                <p>Email</p>
+                  <input type="text" name="" placeholder="" name="eventemail" formControlName="email">
+                    <mat-error class="error" *ngIf="eventemail?.errors?.['email']">
+                      Enter valid email address
+                    </mat-error>
+        </div>
+      <div>
+        <p>Password</p>
+          <input type="password" name="" placeholder="" name="eventpassword" formControlName="password">
+            <mat-error class="error" *ngIf="eventpassword?.errors?.['pattern']">
+              Password should have mim 8 letter password,with at least a symbol,upper and lower case letters and a number
+             </mat-error>
+      </div>
+        <div class="black">
+          <button mat-button id="but" [disabled]="!log.valid" type="submit">Login</button> <br><br>
+        </div>
+        <p class="red" (click)="forgot()">Forgot Password?</p><br>
+        <p class="red" routerLink="/registeration" >Don't have an account?</p>
+        </form>
+      </div>
+    </div>
+      <div *ngIf="logout">
+        <div class="loginbox" id="log">
+          <h1>Forgot Password</h1>
+            <div class="email">
+              <p>Email</p>
+                <input type="text" name="" placeholder="" [(ngModel)]="email" name="email" required>
+            </div>
+            <div class="black">
+              <button mat-button (click)="sendmail()" id="but1"  type="submit">Submit</button> <br><br>
+            </div>
+          <div class="link1">
+            <p>Back To <a  ><span (click)="backto()">Signin.</span></a></p>
+        </div>
+    </div>
+</div>
+    

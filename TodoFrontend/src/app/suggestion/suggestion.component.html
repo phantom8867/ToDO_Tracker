@@ -1,0 +1,54 @@
+ <body> 
+    <div class="all">
+    <div class="img">
+        <img src="../../assets/Avatar/juicy-girl-sending-messages-from-her-phone.gif">
+    </div>
+    <div class="container-fluid h-100">
+        <div class="row   h-100">
+            <div class="col-md-8 col-xl-6">
+                 
+                <div class="card">
+                    <div class="card-header msg_head">
+                        <div class="d-flex bd-highlight">
+                            <div class="img_cont">
+                                <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+                                <!-- <span class="online_icon"></span> -->
+                            </div>
+                            <div class="user_info">
+                                <span>Service bot</span>
+                                <!-- <p>1767 Messages</p> -->
+                            </div>
+                           
+                        </div>
+                         
+                       
+                    </div>
+                    <div class="card-body msg_card_body">
+                        <ng-container *ngFor="let message of messages">
+                            <div class="message"
+                            [ngClass]="{ 'from': message.author === 'bot',
+                            'to': message.author === 'user' }">
+                            {{ message.content }}
+                            </div>
+                            </ng-container>
+                            <div class="card-footer">
+                            <div>
+                            <input [(ngModel)]="value" (keyup.enter)="sendMessage()" placeholder="Type Here" type="text" id="chat">
+                            </div>
+                            <div>
+                            <button   (click)="sendMessage()">Send</button>
+                            </div>
+                              
+                      </div>
+                      <ng-template #dialogInfo>
+                        <span [className]="'float-right'">Total messages: {{messages.length}}</span>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+</body>

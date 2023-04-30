@@ -1,0 +1,42 @@
+<div id="body1">
+  <div class="box">
+  <div class="search-container">
+          <input type="text" name="search" placeholder="Search..." class="search-input" [(ngModel)]="title">
+                <i class='bx bx-search-alt' (click)="search()"></i>   
+                <i class='bx bx-arrow-back' routerLink="/todopage"></i>      
+      </div>
+      </div>
+</div>
+      <section class="vh-100 gradient-custom-2 " *ngIf="hide">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-12 col-xl-10">
+              <div class="card mask-custom">
+                <div class="card-body p-4 text-white">
+                  <mat-card-header>
+                  <div class="text-center pt-3 pb-2">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                            alt="avatar 1" style="width: 45px; height: auto;">
+                    <h1 class="my-4">Task</h1>
+                  </div>
+                  </mat-card-header>
+                  <mat-card-content>
+                  <h2>Title : {{lists.title}}</h2><br>
+                  <h3>Description : {{lists.description}}</h3><br>
+                  <h4>Priority : {{lists.priority}}</h4><br>
+                  <h4>Date : {{lists.date}}</h4><br>
+                  <h4>Alarm : {{lists.time}}</h4><br>
+                  </mat-card-content>
+                  <mat-card-actions>
+                  <div>
+                    <button mat-icon-button routerLink="../../edit/{{lists?.contentid}}"><mat-icon>edit</mat-icon></button>
+                    <button mat-icon-button (click)="deleteCont()" routerLink="/todopage"><mat-icon>delete</mat-icon></button>
+                    <button mat-icon-button routerLink="/todopage"><i class='bx bx-arrow-back'></i></button>
+                  </div>
+                  </mat-card-actions>
+                </div> 
+            </div>
+           </div>
+          </div>
+        </div>
+    </section>   

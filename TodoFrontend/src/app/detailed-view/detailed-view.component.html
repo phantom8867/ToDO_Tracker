@@ -1,0 +1,81 @@
+<div class="color">
+  <div class="card">
+    <div class="ds-top"></div>
+    <div class="avatar-holder">
+      <img src="../../assets/Avatar/tofo.gif" alt="Albert Einstein">
+    </div>
+    <div class="name">
+      <a>Task</a>
+    </div>
+
+    <div class="ds-info">
+      <div class="ds pens">
+        <div class="ptag">
+          <div id="title">
+            <a class="tit">Title :</a><a class="tit1">{{lists.title}}</a>
+          </div>
+          <div id="titles">
+            <a class="tit">Description :</a><br>
+            <p class="tit1">{{lists.description}}</p>
+          </div>
+          <div id="title1">
+            <a class="tit">Priority :</a><a class="tit1">{{lists.priority}}</a>
+          </div>
+          <div id="title1">
+            <a class="tit">Date :</a><a class="tit1">{{lists.date}}</a>
+          </div>
+          <div id="title1">
+            <a class="tit">Time :</a><a class="tit1">{{lists.time}}</a>
+          </div>
+
+          <!-- <a>Description :</a><a>{{lists.time}}</a>
+        <a>Priority :</a><a>{{lists.time}}</a>
+        <a>Date :</a><a>{{lists.time}}</a>
+        <a>Alarm :</a><a>{{lists.time}}</a> -->
+          <!-- <div id="title1">
+        <h3 class="tit">Alarm : </h3><h4>{{lists.time}}</h4><br>
+
+      </div> -->
+    </div>
+  </div>
+  <div >
+    <button (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin" class="edit1">
+      <i class='bx bxs-share-alt' style='color:white' id-="bot1" ></i>
+    </button>
+        <button mat-icon-button class="edit" (click)="openDialog2('0ms', '0ms',lists)"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button class="edit2" (click)="editcontent(lists)"><mat-icon>delete</mat-icon></button>
+        <button mat-icon-button class="edit3" (click)="editcontent1(lists)"><mat-icon>done</mat-icon></button>
+        <button type="button" class="btn-close" (click)="closerdilog()" aria-label="Close" id="btn2"></button>
+        
+        
+        <!-- This template displays the overlay content and is connected to the button -->
+        <ng-template
+          cdkConnectedOverlay
+          [cdkConnectedOverlayOrigin]="trigger"
+          [cdkConnectedOverlayOpen]="isOpen"
+        >
+          <ul class="example-list">
+            <h2>Friends</h2>
+            <li>
+              <div class="nearby-user" *ngFor="let list of friendlist">
+                <div class="row">
+                  <div class="col-md-2 col-sm-2">
+                    <img src="{{list.profileimg}}" alt="user" class="profile-photo-lg">
+                  </div>
+                  <div class="col-md-7 col-sm-7">
+                    <h5><a href="#" class="profile-link">{{list.email}}</a></h5>
+                    <p>{{list.firstname}}</p>
+                    
+                  </div>
+                  <div class="col-md-3 col-sm-3">
+                    <button  class="btn pull-right" id="bon" (click)="sharetodo(list.email,lists)">Send</button>
+                  </div>
+                </div>
+                </div>
+            </li>
+            
+          </ul>
+        </ng-template>
+    </div>
+  </div>
+</div>

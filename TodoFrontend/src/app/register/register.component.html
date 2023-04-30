@@ -1,0 +1,119 @@
+<div class="head">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../../assets/Avatar/beam-woman-is-working-at-a-computer.gif" type="image" id="im1">
+      </div>
+    </div>
+    <div id="hole">
+      <section *ngIf="sent">
+
+        <div class="container h-50">
+
+          <div class="row d-flex justify-content-center align-items-center h-100">
+
+            <div class="col-lg-3 ">
+              <div class="card text-black" style="border-radius: 25px;" id="sect">
+                <div>
+                  <div>
+                    <div>
+                      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" id="signup">Sign up</p>
+                      <form class="mx-1 mx-md-4" [formGroup]="registration" (ngSubmit)="adduser()">
+
+                        <div class="profile-image">
+                          <img width="85" height="85" [src]="imgUrl" id="ing">
+                          <button mat-mini-fab (click)="inputImage.click()" type="button" class="ing2">
+                            <mat-icon>edit</mat-icon>
+                          </button>
+                        </div>
+                        <input #inputImage hidden type="file" (change)="uploadfile($event)">
+
+                        <div class="d-flex flex-row align-items-center mb-4" id="ing1">
+                          <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="text" id="form3Example1c" name="eventfirstname" class="form-control"
+                              formControlName="firstname" />
+
+                            <label class="form-label" for="form3Example1c">Your Name</label>
+                            <mat-error *ngIf="eventfirstName?.errors?.['required']">
+                              First Name is required.
+                            </mat-error>
+
+                          </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="email" id="form3Example3c" class="form-control" formControlName="email" name="eventemail" >
+                            <label class="form-label" for="form3Example3c">Your Email</label>
+                            <mat-error *ngIf="eventemail?.errors?.['pattern']">
+                              Enter the valid email
+                            </mat-error>
+                            <mat-error *ngIf="eventemail?.errors?.['required']">
+                              email is required.
+                            </mat-error>
+                          </div>
+
+                        </div>
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="password" id="form3Example4c" class="form-control"
+                              formControlName="password" name="eventpassword" />
+                            <label class="form-label" for="form3Example4c">Password</label>
+                            <mat-error *ngIf="eventpassword?.errors?.['required']">
+                                      Password is required.
+                                    </mat-error>
+                            <mat-error *ngIf="eventpassword?.errors?.['pattern']">
+                              Password should have min 8 letter password, with at least a symbol, upper and lower case
+                              letters and a number.
+                            </mat-error>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                            <button type="submit" [disabled]="registration.valid" class="btn btn-lg" id="but">Register</button>
+                          </div>
+                        </div>
+
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section *ngIf="sent1">
+        <div class="container h-50">
+
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-3 ">
+              <div class="card text-black" style="border-radius: 25px;" id="sec">
+                <div>
+                  <div>
+                    <div>
+                      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" id="signup">Verification</p>
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-center">Your registerations is still pending. Check your email to verify.</p>
+                    </div>
+                    <div class="id">
+                      <img src="../../assets/Avatar/output-onlinegiftools (2).gif" id="ig" type="image">
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-success btn-block" id="but1" data-dismiss="modal"
+                        routerLink="/login">OK</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>

@@ -1,0 +1,24 @@
+server:
+  port: 9500
+spring:
+  application:
+    name: api-gateway
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      default-filters:
+        -DedupeResponseHeader=Access-control-Allow-Credentials Access-Control-Allow_origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowed-origins: "http://localhost:4200"
+            allowed-methods: "*"
+            allowed-headers: "*"
+            allow-credentials: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: "http://eureka-service:8761/eureka"
+    fetchRegistry: true
+    registerWithEureka: true

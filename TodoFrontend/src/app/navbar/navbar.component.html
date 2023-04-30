@@ -1,0 +1,57 @@
+
+<header>
+  <nav>
+    <header>
+      <div [ngClass]="header_variable?'header_change':'header'">
+        <img src="../../assets/main logo.png" class="logo">
+        <ul *ngIf="view" class="navbar">
+          <li routerLink="todopage">
+            <p>Home</p>
+          </li>
+
+          <li routerLink="service">
+            <p>Service</p>
+          </li>
+          <!-- <li><p class="button" igxButton="raised" [igxToggleAction]="dropdown"
+               [igxDropDownItemNavigation]="dropdown">Account</p>
+           <igx-drop-down #dropdown>
+               <igx-drop-down-item >
+                    <h4>hii</h4>
+               </igx-drop-down-item>
+           </igx-drop-down></li> -->
+          <!-- <li> <mat-form-field >
+            <mat-card-title id="account">Account</mat-card-title>
+            <mat-select name="food">
+              <mat-option>
+                details
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+            </li> -->
+          <li (click)="logOut()">
+            <p>Logout</p>
+          </li>
+        </ul>
+
+
+
+        <div *ngIf="!view" class="main">
+
+
+          <a href="#" class="user" routerLink="login"><i class="ri-user-fill"></i>
+            <p id="sign">Sign In</p>
+          </a>
+          <a href="#" routerLink="registeration">
+            <p>Register</p>
+          </a>
+          <!-- <div class="bx bx-menu" id="menu-icon"></div> -->
+        </div>
+        <!-- <app-todofrontpage></app-todofrontpage> -->
+      </div>
+
+    </header>
+
+
+
+
+    <router-outlet> </router-outlet>

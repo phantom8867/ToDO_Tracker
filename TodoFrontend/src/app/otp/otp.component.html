@@ -1,0 +1,40 @@
+
+<app-reset-password *ngIf="reset" [email]="email"></app-reset-password>
+<body >
+  <div class="container" > 
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../../assets/Avatar/bubble-gum-pink-phone-and-circle-with-check-mark-inside.gif" type="image" id="im1">
+        </div>
+  </div>
+    </div>
+    <div class="container1" *ngIf="!reset">
+      <h2>Verify Your Account</h2>
+      <p>
+        We emailed you the six digit code to your registered E-Mail account <br/>
+        Enter the code below to confirm your E-Mail address
+      </p>
+  
+      <div class="code-container">
+        <!-- <input type="number" class="code" placeholder="0" min="0" max="1"  [(ngModel)]="i1" name="i1" required> -->
+        <input type="number" class="code" placeholder="0" min="0" max="1" minlength="1" maxlength="6" [(ngModel)]="otp2" name="otp2" required>
+        <!-- <input type="number" class="code" placeholder="0" min="0" max="9" minlength="1" maxlength="1" [(ngModel)]="i3" name="i3" required>
+        <input type="number" class="code" placeholder="0" min="0" max="9" minlength="1" maxlength="1" [(ngModel)]="i4" name="i4" required>
+        <input type="number" class="code" placeholder="0" min="0" max="9" minlength="1" maxlength="1" [(ngModel)]="i5" name="i5" required>
+        <input type="number" class="code" placeholder="0" min="0" max="9" minlength="1" maxlength="1" [(ngModel)]="i6" name="i6" required> -->
+      </div>
+  
+      <div>
+        <button type="button" (click)="submit()" class="btn btn-primary">Verify</button>
+      </div>
+      
+  
+      <small class="info"  >
+        If you didn't receive a code !! <strong ><span  (click)="sendmail()"> RESEND</span></strong> 
+      </small>
+    </div>
+    
+    <router-outlet></router-outlet>
+    
+  </body>
+  

@@ -1,0 +1,232 @@
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    
+    li{
+      padding-right: 120px;
+    }
+    #card{
+      background-color: #DAEAF1;
+      overflow: hidden;
+      width:100%;
+      height: 580px;
+    }
+    #im1{
+      width:500px;
+      height: 525px;
+      padding-top: 90px;
+    }
+    #but{
+      color: #fff;
+      background-color: #9861c2;
+  
+    }
+    #ij{
+      margin-right: 390px;
+      margin-top: -20px;
+    }
+    .up{
+      margin-top: -40px;
+    }
+    #add{
+      margin-top: -30px;
+      padding-left: 240px;
+    }
+    #btn2{
+      position: absolute;
+      margin-top: -500px;
+    
+      margin-right: -420px;
+    }
+    .nearby-user{
+        padding-top: 50px;
+    }
+    .people-nearby .google-maps{
+        background: transparent;
+        border-radius: 4px;
+        border: 1px solid #f1f2f2;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .people-nearby .google-maps .map{
+        height: 300px;
+        width: 100%;
+        border: none;
+      }
+      
+      .people-nearby .nearby-user{
+        padding: 20px 0;
+        border-top: 1px solid #f1f2f2;
+        border-bottom: 1px solid #f1f2f2;
+        margin-bottom: 20px;
+      }
+      
+      img.profile-photo-lg{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+      }
+
+
+
+
+      .btn{
+
+        border-radius: 25px;
+    
+       }
+    
+       .new{
+            font-size: 12px;
+       }
+    
+       .card{
+    
+        padding: 20px;
+        border:none;
+        background-color: #DAEAF1;
+       
+    
+       }
+    
+    
+       .active{
+    
+        background: #DAEAF1!important;
+        border-color: #f6f7fb !important;
+        color: #000 !important;
+            font-size: 12px;
+    
+       }
+    
+       .inputs{
+    
+        position: relative;
+    
+       }
+    
+       .form-control {
+            text-indent: 15px;
+        border: none;
+        height: 45px;
+        border-radius: 0px;
+        border-bottom: 1px solid #eee;
+       }
+    
+       .form-control:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #eee;
+        outline: 0;
+        box-shadow: none;
+        border-bottom: 1px solid blue;
+    }
+    
+    
+    .form-control:focus  {
+        color: blue;
+    }
+    
+       .inputs i{
+    
+            position: absolute;
+        top: 14px;
+        left: 4px;
+        color: #b8b9bc;
+       }
+    
+       .star{
+    
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-right: 10px;
+        border-radius: 5px;
+    
+       }
+    
+       .time-text{
+    
+            font-size: 12px;
+            color: #989898;
+       }
+    
+       .dots{
+    
+        height: 7px;
+        width: 7px;
+        background-color: #eee;
+        display: flex;
+        border-radius: 50%;
+        margin-left:7px;
+        margin-right: 7px;
+       }
+    
+       .yellow{
+    
+        color: #ffab2e;
+       }
+    
+       .content-text-1{
+    
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #ffe7cc;
+        color: #ffa03a;
+        font-weight: 700;
+    
+       }
+    
+    
+       .blue{
+    
+        color: #6ecce6;
+       }
+    
+    
+       .content-text-2{
+    
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #e2f5fa;
+        color: #6ecce6;
+        font-weight: 700;
+    
+       }
+    
+    
+       .dark-blue{
+    
+        color: #572ce8;
+       }
+    
+    
+       .content-text-3{
+    
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color:#572ce86b;
+        color: #572ce8;
+        font-weight: 700;
+    
+       }

@@ -1,0 +1,41 @@
+<div>
+        <div class="card" id="size">
+          <div class="card__side card__side--front-2" >
+            <div class="card__title card__title--2" id="crd1">
+                <div class="profile-image">
+                    <img id="profile"
+                      width="120"
+                      height="120"
+                      class="margin-top mat-elevation-z1"
+                      src="{{todolist.profileimg}}">
+                      </div>
+              <h5 class="card__heading">{{todolist.firstname}}</h5>
+              <h5 class="card__heading1" id="alert">Alert</h5>
+              <img src="../../assets/bubble-gum-social-media.gif" alt="" id="notifimage">
+            </div>
+            
+          </div>
+          <div class="card__side card__side--back card__side--back-2">
+            <div class="card__cta">
+                <div class="card__details">
+                    <ul>
+                      <li>{{timelist.title}}</li>
+                      <li>{{timelist.description}}</li>
+                      <li>{{timelist.priority}}</li>
+                      <li>{{timelist.date}}</li>
+                      <li>{{timelist.time}}</li>
+                      <li></li>
+                    </ul>
+                  </div>
+            <button class="" id="btn1" mat-button (click)="editcomplete()">OK</button>
+            <button mat-button (click)="snooze()">Snooze</button>
+            </div>
+          </div>
+          <audio src="../../assets/Avatar/mixkit-access-allowed-tone-2869.mp3"></audio>
+        </div>
+        <audio #notificationSound src="src\assets\mixkit-access-allowed-tone-2869.mp3"></audio>
+ </div>
+
+ 
+   
+    

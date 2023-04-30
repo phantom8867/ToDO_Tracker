@@ -1,0 +1,199 @@
+<div>
+
+
+  <div class="card card-registration " id="card">
+    <div class="row g-0">
+      <div class="col-xl-4 d-none d-xl-block">
+        <img src="../../assets/Avatar/bouncy-completed-checklist-form-on-a-clipboard-and-pencil.gif" alt=""
+          class="img-fluid" id="im1" />
+      </div>
+      <div class="col-xl-8">
+        <div class="card-body p-md-5 text-black">
+          <h3 class="mb-5 text-uppercase" id="add">Add Task</h3>
+          <form #addForm="ngForm">
+            <div class="row">
+
+              <div class="form-outline" class="up">
+                <label class="form-label" for="form3Example1m">Title:</label>
+                <input id="form3Example1m" class="form-control form-control-lg" type="text" name="title" id="title"
+                  placeholder="Title" [(ngModel)]="todolist.title" #title="ngModel" />
+              </div>
+            </div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example8">Description:</label>
+              <input type="text" id="form3Example8" class="form-control form-control-lg" type="text" name="description"
+                id="description" placeholder="description" [(ngModel)]="todolist.description" #description="ngModel" />
+
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label" for="form3Example1m1">Date:</label>
+                  <input type="date" id="form3Example1m1" class="form-control form-control-lg" name="trip-start"
+                    placeholder="dd/mm/yyyy" min="01/01/2000" max="31/12/2100" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"
+                    [(ngModel)]="todolist.date" #date="ngModel" />
+
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label" for="form3Example1m1">Time:</label>
+                  <input type="time" id="form3Example1n1" class="form-control form-control-lg" name="appt" min="01:00"
+                    max="22:00" [(ngModel)]="todolist.time" #time="ngModel" />
+
+                </div>
+              </div>
+            </div>
+            <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+              <h6 class="mb-0 me-4">Priority: </h6>
+
+              <div class="form-check form-check-inline mb-0 me-4">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                  value="High Priority" [(ngModel)]="todolist.priority" />
+                <label class="form-check-label" for="femaleGender">High</label>
+              </div>
+
+              <div class="form-check form-check-inline mb-0 me-4">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                  value="Medium Priority" [(ngModel)]="todolist.priority" />
+                <label class="form-check-label" for="maleGender">Medium</label>
+              </div>
+
+              <div class="form-check form-check-inline mb-0">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                  value="Low Priority" [(ngModel)]="todolist.priority" />
+                <label class="form-check-label" for="otherGender">Low</label>
+              </div>
+            </div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example8">Url:</label>
+              <input type="url" id="form3Example8" name="url" class="form-control form-control-lg"
+                placeholder="https://example.com" pattern="https://.*" size="30" [(ngModel)]="todolist.url"
+                #url="ngModel" />
+
+            </div>
+            <div class="d-flex justify-content-end pt-3" id="ij">
+              <button type="button" class="btn  btn-lg ms-2" id="but" type="submit" (click)="addtodo()">Add</button>
+              <button type="button" class="btn-close" (click)="closerdilog()" aria-label="Close" id="btn2"></button>
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<!-- 
+<section class="vh-100 gradient-custom-2 ">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-12 col-xl-10">
+          <div class="card mask-custom">
+            <div class="card-body p-4 text-white">
+              <div class="text-center pt-3 pb-2">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                        alt="avatar 1" style="width: 45px; height: auto;">
+                <h2 class="my-4">Add Task</h2>
+              </div>
+              <!-- <div >
+                <h1>Voice recognition</h1>
+                <button mat-icon-button style="margin: 10px;" (click)="startService()"><mat-icon>start</mat-icon></button>
+                <button mat-icon-button style="margin: 10px;" (click)="stopService()"><mat-icon>stop</mat-icon></button>
+                <p>{{service.text}}</p>
+            </div> -->
+<!-- <div>
+                <form class="form1" #addForm="ngForm">
+                <div>
+                <input class="input1" type="text" name="title" id="title" placeholder="Title" [(ngModel)]="todolist.title" #title="ngModel">
+                <div *ngIf="title.invalid && (title.dirty || title.touched)">
+                    <div *ngIf="title.errors?.['required']">
+                     title is required
+                    </div>
+                  </div><div *ngIf="title.invalid && (title.dirty ||title.touched)">
+                  <div *ngIf="title.errors?.['required']">
+                    title is required
+                  </div>
+                </div>
+            </div>
+            <div>
+                <textarea class="input2" type="text" name="description" id="description" placeholder="description" [(ngModel)]="todolist.description" #description="ngModel"><h1>Voice recognition</h1>
+                </textarea>
+                  <!-- <p>{{service.text}}</p>  -->
+<!-- <button mat-icon-button style="margin: 10px;" (click)="startService()"><mat-icon>start</mat-icon></button>
+                  <button mat-icon-button style="margin: 10px;" (click)="stopService()"><mat-icon>stop</mat-icon></button> -->
+<!-- <div *ngIf="description.invalid && (description.dirty || description.touched)">
+                    <div *ngIf="description.errors?.['required']">
+                        description is required
+                    </div>
+                  </div><div *ngIf="description.invalid && (description.dirty ||description.touched)">
+                  <div *ngIf="title.errors?.['required']">
+                        description is required
+                  </div>
+                </div>
+                </div>
+                <div> 
+                <input type="date" class="date" id="start" name="trip-start" placeholder="dd/mm/yyyy"  min="01/01/2000" max="31/12/2100"  pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" [(ngModel)]="todolist.date" #date="ngModel">
+                <div *ngIf="date.invalid && (date.dirty || date.touched)">
+                    <div *ngIf="date.errors?.['required']">
+                        date is required
+                    </div>
+                  </div><div *ngIf="date.invalid && (date.dirty ||date.touched)">
+                  <div *ngIf="date.errors?.['required']">
+                        date is required
+                  </div>
+                </div>
+                </div>
+            
+            <div>
+                <input type="time" class="time" id="appt" name="appt" min="01:00" max="22:00" [(ngModel)]="todolist.time" #time="ngModel">
+                <div *ngIf="time.invalid && (time.dirty || time.touched)">
+                    <div *ngIf="time.errors?.['required']">
+                        time is required
+                    </div>
+                  </div><div *ngIf="time.invalid && (time.dirty ||time.touched)">
+                  <div *ngIf="time.errors?.['required']">
+                        time is required
+                  </div>
+                  </div>
+                 </div>
+                 <div class="text-center">
+                  <mat-radio-group aria-label="Select an Option" name="priority" [(ngModel)]="todolist.priority">
+                    <span class="mat-headline-6" >Priority</span>
+                    <mat-radio-button *ngFor="let pri of priority" [value]="pri">{{pri}}</mat-radio-button>
+                  </mat-radio-group>
+                  <!-- <input type="radio" required value="High Priority" [(ngModel)]="todolist.priority"> High Priority
+                  <input type="radio" required value="Low Priority" [(ngModel)]="todolist.priority"> Low Priority
+                  <input type="radio" required value="Medium Priority" [(ngModel)]="todolist.priority"> Medium Priority -->
+<!-- </div>
+                  <div>
+                  <input type="url" class="url"name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" [(ngModel)]="todolist.url" #url="ngModel">
+                  <div *ngIf="url.invalid && (url.dirty || url.touched)">
+                    <div *ngIf="url.errors?.['required']">
+                        url is required
+                    </div>
+                  </div><div *ngIf="url.invalid && (url.dirty ||url.touched)">
+                  <div *ngIf="url.errors?.['required']">
+                        url is required
+                  </div>
+                  </div>
+                  </div>
+                  <div>
+                    <button mat-button type="submit" (click)="addtodo()" class="btnn">Save</button>
+                    <button mat-button class="btnn1" type="back" routerLink="/todopage" >Back</button> -->
+<!-- <button class="btnn2" type="back" routerLink="/content">Back</button> -->
+<!-- </div> -->
+
+<!-- </form>
+               </div>
+            </div>
+            </div>
+           </div>
+          </div>
+        </div>
+</section> -->

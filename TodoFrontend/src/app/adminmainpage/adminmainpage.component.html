@@ -1,0 +1,219 @@
+<div id="body">
+
+  <!-- <div *ngIf="search" id="body1">
+    <div class="box">
+    <div class="search-container">
+            <input type="text" name="search" placeholder="Search..." class="search-input" [(ngModel)]="title">
+                  <i class='bx bx-search-alt' (click)="searchs()"></i>   
+                  <i class='bx bx-arrow-back' routerLink="/todopage"></i>      
+        </div>
+        </div>
+  </div> -->
+  
+  
+  <!-- <app-notification id="notification" *ngIf="true" [timelist]="timelist"></app-notification> -->
+ <div class="bar">
+  <ul>
+    <li><p>Date : </p><p>{{date}}</p></li>
+    <li><h3>Admin</h3></li>
+    <li><p>Catogery : Suggestion</p></li>
+  </ul>
+ </div>
+  <div  class = "container" >
+    <div class="row">
+      <div class="col-12">
+        
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-borderless mb-0" id="table1">
+                <thead>
+                  <tr>
+                    <th scope="col">Profile</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Suggestion</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let lists of getuser">
+                    <th scope="row">
+                      <div class="form-check" >
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" checked/>
+                      </div>
+                    </th>
+                    <td><img href = "#" src ="{{lists.profileimg}}"></td>
+                    <td>{{lists.email}}</td>
+                    <td>{{lists.firstname}}<td>
+                    <td>{{lists.phonenumber}}</td>
+                    <td>{{lists.suggestion}}</td>
+                    <td>
+                      <button type="button" class="btn btn-danger btn-sm px-3">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </td>
+                  </tr>
+                 
+                    
+                </tbody>
+              </table>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+  <!-- <div class = "col-lg-2" id="card" *ngFor="let lists of getuser">
+    <div class = image  >
+      <img href = "#" src ="{{lists.profileimg}}"><br>
+     <div class="headsing" >
+      <h5>{{lists.firstname}}</h5>
+      </div>
+    </div>
+    
+    <div class = content>
+     <div>
+    
+     <p>Email:{{lists.email}}</p>
+     <p >Suggestion:{{lists.suggestion}}</p> -->
+     <!-- <div [ngSwitch]="lists.suggestion" >
+      <p *ngSwitchCase="'High Priority'"  class="badge bg-danger">{{lists.priority}}</p>
+      <p *ngSwitchCase="'Medium Priority'" class="badge bg-warning" >{{lists.priority}}</p>
+      <p *ngSwitchCase="'Low Priority'"  class="badge bg-success">{{lists.priority}}</p>
+      </div> -->
+     <!-- <p>priority:{{lists.priority}}</p> -->
+     <!-- <p>status:{{lists.status}}</p> -->
+      <!--  -->
+     <!-- <button mat-icon-button color="primary"  (click)="editcontent(lists)"><i class='bx bxs-trash'></i></button> -->
+     <!-- <button mat-icon-button color="primary" (click)="openDialog2('0ms', '0ms',lists)"><mat-icon>edit</mat-icon></button> -->
+     
+    
+    <!-- </div>
+  </div> -->
+    
+      
+
+<!-- <button mat-raised-button (click)="openDialog('0ms', '0ms')">Open dialog without animation</button>
+<button mat-raised-button (click)="openDialog('3000ms', '1500ms')">Open dialog slowly</button> -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="body">
+<mat-drawer-container class="example-container" autosize id="body">
+    
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <div class="sidebar close">
+            <div class="logo-details">
+              <i class='bx bxl-c-plus-plus'></i>
+              <span class="logo_name">CodingLab</span>
+            </div>
+            <ul class="nav-links">
+              
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class='bx bxs-user-circle' ></i>
+                    <span class="link_name"></span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow' ></i>
+                </div>
+                <ul class="sub-menu">
+                  <li><a class="link_name" (click)="activat()">User Profile</a></li>
+                  
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class='bx bx-collection' ></i>
+                    <span class="link_name"></span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow' ></i>
+                </div>
+                <ul class="sub-menu">
+                  <li><a class="link_name" (click)="activat1()">Suggestion</a></li>
+                  
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class='bx bx-archive-in'></i>
+                    <span class="link_name"></span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow' ></i>
+                </div>
+                <ul class="sub-menu">
+                  <li><a class="link_name">Archieve</a></li>
+                  <li><a >Completed</a></li>
+                  <li><a >reject</a></li>
+                  
+                </ul>
+              </li>
+              <li> 
+              </li> 
+          <li>
+            <a>
+              <i class='bx bx-log-out' routerlink="/notification"></i>
+              <span class="link_name" >logout</span>
+            </a>
+            <ul class="sub-menu blank"  >
+              <li><a class="link_name"  >Log Out</a></li>
+            </ul>
+          </li>
+        </ul>
+          </div>
+       
+    </mat-drawer>
+  
+    <div class="example-sidenav-content" >
+      <button type="button" mat-button (click)="drawer.toggle()" >
+        <i class='bx bxs-chevron-right-circle'></i>
+      </button>
+    </div>
+  <div class = "container row" *ngIf="getusers">
+    <div class = "col-md-3" id="card" *ngFor="let lists of getuser">
+      <div class = image  routerLink="../detail/{{lists?.contentid}}">
+        <img href = "#" src ="{{lists.profileimg}}"><br>
+       <div class="headsing" >
+        <h5>{{lists.email}}</h5>
+        </div>
+      </div>
+      <div class = content>
+       
+       <h4>Name:{{lists.firstname}}.{{lists.lastname}}</h4>
+       <h4>Phone:{{lists.phonenumber}}</h4>
+       
+      </div>
+      </div>
+      </div>
+      <div class = "container row" *ngIf="getsuggestion">
+        <div class = "col-md-3" id="card" *ngFor="let lists of getuser">
+          <div class = image  routerLink="../detail/{{lists?.contentid}}">
+            <img href = "#" src ="../../assets/Avatar/cat.png"><br>
+           <div class="headsing" >
+            <h5>{{lists.email}}</h5>
+            <h4>Name:{{lists.firstname}}.{{lists.lastname}}</h4>
+            </div>
+          </div>
+          <div class = content>
+           <h4>{{lists.suggestion}}</h4> 
+          </div>
+          </div>
+          </div>
+    </mat-drawer-container>   
+  </div> -->

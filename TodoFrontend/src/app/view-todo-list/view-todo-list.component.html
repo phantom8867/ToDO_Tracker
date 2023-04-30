@@ -1,0 +1,103 @@
+ 
+<div id="body">
+
+  <div *ngIf="search" id="body1" class="row">
+    <div class="box col-md-12">
+    <div class="search-container">
+            <input type="text" name="search" placeholder="Search..." class="search-input" [(ngModel)]="title">
+                  <i class='bx bx-search-alt' (click)="searchs()"></i>   
+                  <!-- <i class='bx bx-arrow-back' routerLink="/todopage"></i>       -->
+        </div>
+        </div>
+  </div>
+  <!-- <app-search *ngIf="search" [lists]="filterdate"  (searchTextChanged)="onSearchTextChanged($event)"></app-search> -->
+  
+  <!-- <app-notification id="notification" *ngIf="true" [timelist]="timelist"></app-notification> -->
+ <div class="bar">
+  <ul>
+    <div class="title">
+    <li><h3>My Task</h3></li>
+    </div>
+    <div >
+    <li><input mat-input type="date" class="date" id="dates"  name="trip-start" (change)="searchdate(dates)" placeholder="DD/MM/YYYY" min="01/01/2000" max="31/12/2100" [(ngModel)]="dates"></li>
+    
+    <li><form appearance="fill" class="dropdown">
+      <!-- <mat-label>Priority</mat-label> -->
+      <mat-select matTooltip="Priority" (selectionChange)="outputpriority(priority)" [(value)]="priority">
+        <mat-option value="All">All</mat-option>
+        <mat-option value="High Priority">High Priority</mat-option>
+        <mat-option value="Medium Priority">Medium Priority</mat-option>
+        <mat-option value="Low Priority">Low Priority</mat-option>
+      </mat-select>
+    </form></li>
+    <!-- <li><mat-drawer-container >
+      <mat-drawer #sideNav mode="side" opened="true" position="end" class="example-container">
+        Drawer content
+      </mat-drawer>
+      <mat-drawer-content>
+        <button (click)="sideNav.toggle()" mat-button>Toggle</button>
+        <button (click)="onTogglePosition(nav_position)" mat-button>Toggle Position {{ nav_position }}</button>
+      </mat-drawer-content>
+    </mat-drawer-container></li> -->
+  </div>
+
+    <!-- <li><form appearance="fill">
+      <mat-select (selectionChange)="outputpriority(priority)" [(value)]="priority">
+         <option value="All">All</option> 
+         <option value="High Priority">High Priority</option> 
+         <option value="Medium Priority">Medium Priority</option> 
+         <option value="Low Priority">Low Priority</option>
+      </mat-select>
+   </form></li> -->
+
+    <!-- <li><p>Priority : </p><p>{{ priority}}</p></li> -->
+  </ul>
+ </div>
+  <div *ngIf="!hide" class = "containers">
+  <div class="row">
+
+  <div class = "col-md-2" id="card" *ngFor="let lists of cont">
+    <div class = image  (click)="openDialog3('0ms', '0ms',lists)">
+      <img href = "#" src ="../../assets/Avatar/task.png"><br>
+     <div class="headsing" >
+      <h5>{{lists.title}}</h5>
+      </div>
+    </div>
+    <div class = content>
+     <div>
+     <p>Date:{{lists.date}}</p>
+     <p>Time:{{lists.time}}</p>
+     <div [ngSwitch]="lists.priority" >
+      <p *ngSwitchCase="'High Priority'"  class="badge bg-danger">{{lists.priority}}</p>
+      <p *ngSwitchCase="'Medium Priority'" class="badge bg-warning" >{{lists.priority}}</p>
+      <p *ngSwitchCase="'Low Priority'"  class="badge bg-success">{{lists.priority}}</p>
+      </div>
+     <!-- <p>priority:{{lists.priority}}</p> -->
+     <p>status:{{lists.status}}</p>
+      <!--  -->
+      <div class="buttons">
+      <button mat-icon-button (click)="editcontent(lists)"><i class='bx bxs-trash'></i></button>
+      <button mat-icon-button (click)="openDialog2('0ms', '0ms',lists)"><mat-icon>edit</mat-icon></button>
+      
+    </div>
+     
+     
+       </div>
+    
+  </div>
+    
+      
+</div>
+<div class="col-md-2" id="card1" >
+   
+  <i (click)="openDialog1('0ms', '0ms')" id="plus" class='bx bx-plus'></i>
+  
+    
+</div>
+<!-- <button mat-raised-button (click)="openDialog('0ms', '0ms')">Open dialog without animation</button>
+<button mat-raised-button (click)="openDialog('3000ms', '1500ms')">Open dialog slowly</button> -->
+</div>
+
+</div>
+
+</div>

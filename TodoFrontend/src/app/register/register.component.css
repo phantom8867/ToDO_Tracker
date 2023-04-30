@@ -1,0 +1,269 @@
+.head{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../../assets/Avatar/Image20230314153907.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#sect{
+  background-color: #DAEAF1;
+  width: 450px;
+  height: 80vh;
+  margin-left:450px;
+  margin-top: 120px;
+  border-radius: 25px;
+}
+#sec{
+  background-color: #DAEAF1;
+  width: 500px;
+  height: 80vh;
+  margin-left:390px;
+  margin-top: 120px;
+  border-radius: 25px;
+}
+.modal-body{
+  padding-top: 10px;
+  padding-left:20px;
+  font-size:25px;
+  color: rgb(67, 77, 81);
+}
+.id{
+  padding-left: 120px;
+}
+#im1{
+  width:450px;
+  height: 450px;
+  margin-top: 200px;
+}
+#hole{
+  margin-top: -650px;
+  margin-left: 50px;
+}
+#ig{
+  width: 250px;
+  height: 250px;
+  
+}
+#sect1{
+  margin-top: -10px;
+}
+#signup{
+  padding-top: 20px;
+  padding-left: -5px;
+  color: rgb(67, 77, 81);
+}
+.profile-image {
+  padding-top: -80px;
+  margin-left: -60px;
+  position: relative;
+  width: 60px;
+  margin: auto;
+}
+
+.profile-image > img {
+  padding-top: -50px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-image > button {
+  position: absolute;
+  bottom: 18px;
+  padding-right: 2px;
+  right: 0;
+}
+#but{
+  background-color: rgb(152, 97, 194);
+  color:black;
+  border-radius: 20px;
+}
+#but1{
+  background-color: rgb(152, 97, 194);
+  color:black;
+  border-radius: 20px;
+  width:110px;
+  margin-right: 190px;
+  margin-top: 25px;
+}
+#ing{
+  margin-top: -40px;
+  margin-left:-20px;
+}
+#ing1{
+  margin-top: 30px;
+}
+.ing2{
+  width: 20px;
+  height: 20px;
+  margin-top: 150px;
+  background-color: transparent;
+  padding-left:10px;
+}
+
+@media screen and  (max-width: 1080px){
+  .head{
+    width: auto;
+    height: 100vh;
+    background-image: url(../../assets/Avatar/Image20230314153907.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+#im1{
+  width:200px;
+  height: 200px;
+  margin-top: 100px;
+  position: absolute;
+}
+
+#hole{
+  margin-top: -650px;
+  margin-left: 50px;
+  
+}
+#sect{
+  background-color: #DAEAF1;
+  width: px;
+  height: 80vh;
+  margin-left:-80px;
+  margin-top: 950px;
+  border-radius: 25px;
+  position: absolute;
+}
+
+}
+
+/* button{
+  color: #fbfcfd;
+  padding: 10px 25px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.Content{
+  color: #fbfcfd;
+  position: absolute;
+  top: 50%;
+  left:8%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+h1{
+  font-size: 80px;
+  margin:10px 0 30px;
+  line-height: 80px;
+}
+
+.bubbles img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+}
+
+.bubbles{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position:absolute;
+  bottom: -70px;
+}
+
+
+
+.form{
+    width: 650px;
+    height: 650px;
+    background: rgba(8, 45, 74,0.9);
+    position: absolute;
+    top: 190px;
+    left: 1300px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: rgb(0, 0,0) 2px 4px 26px 4px;
+  }
+
+  .form h1{
+    width: 220px;
+    font-family: sans-serif;
+    font-weight: bold;
+   
+    text-align: center;
+    color:rgb(255,255, 255) ;
+    font-size: 25px;
+    /* background-color: black; */
+    /* border-radius: 10px;
+    margin: 2px;
+    margin-left: 190px;
+    padding: 8px;
+  } */
+  /* #ing{
+    margin-top:-120px
+  }
+  .form mat-label{
+    color: rgb(255,255, 255);
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+  }
+  .form1{
+    margin-top: 140px;
+  }
+
+  .form mat-form-field{
+    width: 450px;
+    height: 50px;
+    border-top: none;
+    border-right: none;
+    border-left: none; 
+    margin-top: 10px;
+}
+
+.profile-image {
+  position: relative;
+  width: 120px;
+  margin: auto;
+}
+
+.profile-image > img {
+  margin-top: -150px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-image > button {
+  position: absolute;
+  bottom: 18px;
+  padding-right: 2px;
+  right: 0;
+}
+.edit{
+  position: absolute;
+  width: 70px;
+  cursor: pointer;
+  right: 0;
+  padding-top: 90px;
+}
+
+#button1{
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+#button2{
+  margin-top: 50px;
+  background-color: transparent;
+  color: white;
+}  */

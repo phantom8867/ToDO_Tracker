@@ -1,0 +1,33 @@
+<div class="head">
+    <div class="bubbles">
+      <img src="../../assets/bubble.png">
+      <img src="../../assets/bubble.png">
+      <img src="../../assets/bubble.png">
+      <img src="../../assets/bubble.png">
+      <img src="../../assets/bubble.png">
+      <img src="../../assets/bubble.png">
+      <img src="../../assets/bubble.png">
+    </div>
+    <router-outlet></router-outlet>
+<div id="myModal" class="main">
+	 <div class="modal-dialog modal-confirm"> 
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="icon-box">
+					<i class="material-icons">&#xE876;</i>
+				</div>	
+				<img src="../../assets/Avatar/output-onlinegiftools (2).gif" type="image">
+
+				
+				<h4 class="modal-title">Verification Pending!..</h4>	
+			</div>
+			<div class="modal-body">
+				<p class="text-center">Your registerations is still pending. Check your email to verify.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success btn-block" id="butt" data-dismiss="modal" routerLink="/login">OK</button>
+			</div>
+		</div>
+	</div>
+</div>    
+<router-outlet></router-outlet>

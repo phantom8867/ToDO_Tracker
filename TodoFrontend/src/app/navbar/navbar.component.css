@@ -1,0 +1,183 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+:root{
+   --bg-color:#222327;
+   --text-color: #223345;
+   
+}
+
+.header{
+  position: fixed;
+  width: 100%;
+  top:0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 28px 12%;
+  transition: all .50s ease;
+}
+.pink{
+  position: fixed;
+  width: 100%;
+  top:0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: palevioletred;
+  padding: 28px 12%;
+  transition: all .50s ease;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  width: 230px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+ 
+p{
+  font-size: larger;
+}
+
+ul li{
+  display:inline-block;
+  list-style: none;
+  margin: 10px 30px;
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  color: rgb(67, 77, 81);
+  
+}
+
+ul li:hover{
+  transition: width 0.3s;
+  color: #000;
+}
+
+ul li p::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  position: absolute;
+ 
+  bottom: 0;
+  left:50%;
+  transform: translateX(-50%);
+  background-color: black;
+  transition: width 0.3s;
+}
+
+ul li p:hover::after{
+  width: 60%;
+}
+
+.main{
+  display: flex;
+  align-items: center;
+ 
+
+}
+#account{
+  height: 20px;
+}
+.main a{
+
+  font-size: large;
+  list-style: none;
+  margin: 10px 30px;
+  position: relative;
+  color: rgb(67, 77, 81);
+
+ 
+}
+.main a:hover{
+  color: black;
+}
+.main a p::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  transform: translateX(-50%);
+  background-color:  black;
+  transition: width 0.3s;
+}
+
+.main a p:hover::after{
+  width: 60%;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+}
+.user i{
+  color: black;
+  font-size: 15px;
+  margin-right: 7px;
+}
+
+.main a:hover{
+  color: black;
+}
+.main a i:hover{
+  color: black;
+}
+
+/* #menu-icon{
+  font-size: 45px;
+  color:#29fd53;
+  cursor: pointer;
+  z-index: 1001;
+} */
+
+ @media(max-width:1280px){
+  header{
+    padding: 14px 2%;
+    transition: .2s;
+  }
+  .navbar a{
+    padding: 5px 0;
+    margin: 0px 20px ;
+  }
+  .logo{
+    display: absolute;
+    align-items: center;
+    max-width: 200px;
+    height: auto;
+    margin-top: 0px;
+    margin-left: -50px;
+  }
+  #sign{
+    padding: 0;
+  }
+ }
+ .header_change{
+  position: fixed;
+  width: 100%;
+  top:0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F2D1D1;
+  padding: 28px 12%;
+  transition: all .50s ease;
+ 
+ }

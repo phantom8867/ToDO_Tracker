@@ -1,0 +1,155 @@
+<div class="head">
+  <div class="head">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../../assets/Avatar/conifer-filling-in-personal-information.png" type="image" id="im1">
+        </div>
+      </div>
+      <div id="hole">
+        <section>
+
+          <div class="container h-50">
+
+            <div class="row d-flex justify-content-center align-items-center h-100">
+
+              <div class="col-lg-3 ">
+                <div class="card text-black" style="border-radius: 25px;" id="sect">
+                  <div>
+                    <div>
+                      <div>
+                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" id="signup">Edit Profile</p>
+                        <form class="mx-1 mx-md-4" [formGroup]="registration" (ngSubmit)="edituser()">
+
+                          <div class="profile-image">
+                            <img width="140" height="140" [src]="imgUrl" src="{{todolist1.profileimg}}" id="ing">
+                            <button mat-mini-fab (click)="inputImage.click()" type="button" class="ing2">
+                              <mat-icon>edit</mat-icon>
+                            </button>
+                          </div>
+                          <input #inputImage hidden type="file" (change)="uploadfile($event)">
+
+                          <div class="d-flex flex-row align-items-center mb-4" id="ing1">
+                            <i class="fas fa-user fa-lg me-3 fa-fw" id="icon"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="text" id="form3Example1c"  name="eventfirstname" class="form-control"
+                                formControlName="firstname" value="{{todolist1.firstname}}" />
+
+                              <label class="form-label" for="form3Example1c">Your Name</label>
+                              <mat-error *ngIf="eventfirstname?.errors?.['required']">
+                                First Name is required.
+                              </mat-error>
+
+                            </div>
+                          </div>
+
+
+
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-lock fa-lg me-3 fa-fw" id="icon"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="password" id="form3Example4c" class="form-control" formControlName="password" name="eventpassword?"
+                                value="{{todolist1.password}}" />
+                              <label class="form-label" for="form3Example4c">Password</label>
+                              <mat-error *ngIf="eventpassword?.errors?.['required']">
+                                Password is required.
+                            </mat-error>
+                            <mat-error *ngIf="eventpassword?.errors?.['pattern']">
+                             Password should have min 8 letter password, with at least a symbol, upper and lower case letters
+                             and a number.
+                         </mat-error>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fa fa-mobile fa-lg me-3 fa-fw " id=></i>
+
+
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="text" id="form3Example4c" class="form-control" formControlName="phonenumber"
+                                value="{{todolist1.phonenumber}}" name="eventphonenumber" />
+                              <label class="form-label" for="form3Example4c">phone</label>
+                              <mat-error  *ngIf="eventphonenumber?.errors?.['pattern'] && eventphonenumber?.dirty">
+                               Enter valid Phone Number.
+                            </mat-error>
+                            </div>
+                          </div>
+
+
+                          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                            <button type="submit" class="btn  btn-lg" id="but">Edit</button>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div id="body">
+    <div id="heading" class="form">
+        <h1>Registration </h1>
+
+   <div>
+    
+         <form  [formGroup]="registration" class="form1" (ngSubmit)="edituser()">
+           <div>
+            <div class="profile-image">
+               <img
+                 width="120"
+                 height="120"
+                 class="margin-top mat-elevation-z1"
+                 [src]="imgUrl"
+                 src="{{todolist1.profileimg}}">
+               <button mat-mini-fab (click)="inputImage.click()" type="button">
+                <mat-icon>edit</mat-icon>
+               </button>
+             </div>
+             <input #inputImage hidden type="file"  (change)="uploadfile($event)">
+           
+             
+               <div>
+               <mat-form-field appearance="outline">
+               <input matInput placeholder="First Name"  class="input"type="text" id="firstName" formControlName="firstname" value="{{todolist1.firstname}}"/>
+               <mat-error *ngIf="firstname?.errors?.['required']">
+                  First Name is required.
+                </mat-error>
+               </mat-form-field>
+               </div>
+               <div>
+               <mat-form-field appearance="outline"  id="lasttname">
+                  
+                  <input matInput placeholder="Last Name" type="text" id="lastName" formControlName="lastname" value="{{todolist1.lastname}}"/>
+                  <mat-error *ngIf="lastname?.errors?.['required']">
+                    lastName is required.
+                 </mat-error>
+               </mat-form-field>
+               </div>
+            
+            
+            
+            <div>
+               <mat-form-field appearance="outline">
+                  
+                  <input matInput placeholder="" type="text" formControlName="phonenumber" value="{{todolist1.phonenumber}}"/>
+                  <mat-error *ngIf="phonenumber?.errors?.['required']">
+                     phonenumber is required.
+                 </mat-error>
+               </mat-form-field>
+            </div>
+         </div>
+            
+             <button id="button1" mat-button mat-raised-button type="reset">Reset</button>
+             <button id="button2" mat-button mat-raised-button 
+                 type="submit">Submit</button>
+             <button id="button3" mat-button mat-raised-button type="back" (click)="canDeactivate()">Back</button>
+               
+        </form>
+       </div>
+</div> -->

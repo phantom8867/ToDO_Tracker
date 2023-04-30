@@ -1,0 +1,56 @@
+<section class="vh-100" id="body1">
+    <div class="container py-5 h-100">
+      <div id="start">
+      <input type="date" class="date" id="start" name="trip-start" placeholder="dd/mm/yyyy"  min="01/01/2000" max="31/12/2100"  [(ngModel)]="date">
+       <button mat-icon-button type="button" (click)="searchByDate()" >button</button> 
+    </div>
+    <div class="row" id="body">
+        <div class = container>
+            <div class = card *ngFor="let lists of filterdate">
+              <div class = image >
+                <img href = "#" src ="../../assets/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png">
+               <div class="headsing" >
+                <h5>{{lists.title}}</h5>
+                </div>
+              </div>
+              <div class = content>
+               <p>Description:{{lists.description}}</p>
+               <p>Date:{{lists.date}}</p>
+               <p>Time:{{lists.time}}</p>
+               <p>priority:{{lists.priority}}</p>
+               <p>status:{{lists.status}}</p>
+               <i class="bi bi-pencil-square"></i>
+               <button mat-icon-button color="primary" >Done</button>
+               <button mat-icon-button color="primary" routerLink="../edit/{{lists?.id}}">edit</button>
+              </div>
+            </div>    
+          </div>
+          
+
+
+
+     <!-- <div class="col-md-4" *ngFor="let lists of filterdate">
+          <mat-card id="cardtext" routerLink="../detail/{{lists?.contentid}}">
+              <mat-card-header>
+                  <mat-card-title><h2>{{lists.title}}</h2></mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <br>
+                  <h4>{{lists.priority}}</h4>
+              </mat-card-content>
+              <p>Alarm : {{lists.time}}</p>
+              <div id="icons">
+                  <mat-card-actions>
+                      <div>
+                        <p>Action</p>
+                          <button mat-icon-button color="primary" ><mat-icon>Done</mat-icon></button>
+                          <button mat-icon-button color="primary" routerLink="../edit/{{lists?.id}}"><mat-icon>edit</mat-icon></button> 
+                          <button mat-icon-button color="danger"><mat-icon>Not</mat-icon></button>
+                           
+                      </div>
+                  </mat-card-actions> 
+              </div>   
+          </mat-card>
+      </div>  -->
+
+    </div> 

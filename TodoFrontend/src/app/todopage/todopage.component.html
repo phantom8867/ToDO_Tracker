@@ -1,0 +1,369 @@
+<!-- <div>
+  <mat-card *ngIf="viewnotify">
+    <mat-card-header>
+      <h1>Notification</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <h3>{{notification.title}}</h3>
+    </mat-card-content>
+  </mat-card>\
+  (notifylist)="notifyInNav($event)"
+</div> -->
+
+
+
+<!-- <app-view-todo-list *ngIf="!archive" [cont]="cont" [dates]="date" [priority]="priority" [search]="search" (searchText)="onSearchText($event)" ></app-view-todo-list>
+<app-archive *ngIf="archive" [cont]="cont"></app-archive> -->
+
+<mat-drawer-container class="example-container" hasBackdrop="false">
+ 
+  <mat-drawer id="sidebar" #drawer mode="side">
+
+ 
+    <!-- <mat-drawer-container>hii</mat-drawer-container> -->
+    <div class="cards">
+      <mat-accordion>
+
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <i class='bx bxs-user-circle' id="arc"></i> Account
+            </mat-panel-title>
+
+          </mat-expansion-panel-header>
+          <div class="card-container">
+            <img class="round" src="{{todolist1.profileimg}}" alt="user" />
+            <h3>{{todolist1.firstname}}</h3>
+            <h6>{{todolist1.phonenumber}}</h6>
+            <div class="buttons">
+              <button class="primary" routerLink="/viewprofile">
+                View profile
+              </button>
+              <br>
+              <button class="primary ghost" routerLink="/editprofile">
+                Edit profile
+              </button>
+            </div>
+          </div>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+
+    <div class="cards">
+      <mat-accordion>
+
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title><i class='bx bx-category' id="arc"></i>
+              Category
+            </mat-panel-title>
+
+          </mat-expansion-panel-header>
+          <div class="sub-menu">
+            <button mat-button type="button" (click)="ngOnInit()" id="but4">All</button>
+            <button mat-button type="button" id="but3" (click)="highpri()">High Priority</button>
+            <button mat-button type="button" id="but5" (click)="mediumpri()">Medium Priority</button>
+            <button mat-button type="button" id="but3" (click)="lowpri()">Low Priority</button>
+
+          </div>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+    <div class="cards">
+      <mat-accordion>
+
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <i class='bx bx-calendar' id="arc"></i> Date
+            </mat-panel-title>
+
+          </mat-expansion-panel-header>
+          <input mat-input type="date" class="date" id="start" name="trip-start" (change)="searchByDate(date)"
+            placeholder="DD/MM/YYYY" min="01/01/2000" max="31/12/2100" [(ngModel)]="date">
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+    <div class="cards">
+      <!-- <mat-accordion > -->
+      <button mat-button type="button" (click)="openDialog1('200ms', '200ms')" id="but2"><i class='bx bx-add-to-queue'
+          id="arc1"></i> Add</button>
+      <!-- <mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+    <a class="link_name" (click)="openDialog1('0ms', '0ms')">Add</a> 
+    </mat-panel-title>
+    
+  </mat-expansion-panel-header> -->
+
+
+      <!-- </mat-expansion-panel> -->
+      <!-- </mat-accordion> -->
+    </div>
+
+    <div class="cards">
+      <!-- <mat-accordion > -->
+      <button mat-button type="button" (click)="searchbar()" id="but8"><i class='bx bx-search-alt'
+          id="arc"></i>Search</button>
+      <!-- <mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+    <a class="link_name" (click)="openDialog1('0ms', '0ms')">Add</a> 
+    </mat-panel-title>
+    
+  </mat-expansion-panel-header> -->
+
+
+      <!-- </mat-expansion-panel> -->
+      <!-- </mat-accordion> -->
+    </div>
+
+    <div class="cards">
+      <mat-accordion>
+
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title><i class='bx bx-archive-in' id="arc"></i>
+              Archive
+            </mat-panel-title>
+
+          </mat-expansion-panel-header>
+          <div class="sub-menu">
+            <button mat-button type="button" id="but6" (click)="pending()">Pending</button>
+            <button mat-button type="button" id="but7" (click)="complited()">Completed</button>
+          </div>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+
+
+
+
+<div class="cards">
+  <mat-accordion >
+    
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                     (closed)="panelOpenState = false">
+  <mat-expansion-panel-header>
+    <mat-panel-title><i class='bx bx-group' id="arc"></i>
+      Friends
+    </mat-panel-title>
+    
+  </mat-expansion-panel-header>
+  <div class="sub-menu">
+    <button mat-button type="button" id="but66" (click)="openDialog3('200ms', '200ms')">AddFriend</button>
+    <button mat-button type="button" id="but67" routerLink="/friends">Friends</button> 
+    <!-- <button mat-button type="button" id="but68" (click)="complited()">Request</button>  -->
+ </div>
+   
+</mat-expansion-panel>
+</mat-accordion>
+</div>
+ 
+
+
+
+
+
+
+
+  </mat-drawer>
+
+  <mat-drawer #sideNav mode="side" class="rightsidenav"  position="end" >
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+      <mat-tab [matBadge]="length2" matBadgeColor="warn" label="Request"><div class="nearby-user" *ngFor="let listss of requests">
+        <div class="row">
+          <div class="col-md-3 col-sm-3">
+            <img src="{{listss.profileimg}}" alt="user" class="profile-photo-lg">
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <p><a   class="profile-link">{{listss.email}}</a></p>
+            <p>{{listss.firstname}}</p>
+            
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <button class="btn pull-right" id="bon"(click)="acceptfriend(listss.email)">Accept</button>
+            <button class="btn pull-right" id="btnss" (click)="rejectfriend(listss.email)">Reject</button>
+          </div>
+        </div>
+      </div></mat-tab>
+      <mat-tab [matBadge]="length3"  matBadgeColor="warn" label="Notification"><div class="nearby-user" *ngFor="let listss of addtodo">
+        <div class="row">
+          <!-- <div class="col-md-3 col-sm-3">
+            <img src="{{listss.}}" alt="user" class="profile-photo-lg">
+          </div> -->
+          <div class="col-md-7 col-sm-7">
+            <h6><a   class="profile-link">{{listss.title}}</a></h6>
+            <p>By : {{listss.sendby}}</p>
+            
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <button class="btn pull-right" id="bon" (click)="addlist(listss)">Add</button>
+            <button class="btn pull-right"  id="btnss" (click)="cancel(listss)">Cancel</button>
+          </div>
+        </div>
+      </div></mat-tab>
+    
+    </mat-tab-group>
+  </mat-drawer>
+  <mat-drawer-content>
+
+    <app-view-todo-list *ngIf="!archive" [cont]="cont" [dates]="date" [priority]="priority" [search]="search"
+      (searchText)="onSearchText($event)" (outputpriority)="onprioritytext($event)"></app-view-todo-list>
+    <app-archive *ngIf="archive" [cont]="cont" [dates]="date" [cat]="cat"></app-archive>
+    <div class="logo-details">
+
+    <button matTooltip="More" id="sidebarbtn"  mat-button    (click)="drawer.toggle()"> <i   class="bx bx-menu"></i></button>
+  </div>
+  
+    
+      <!-- <mat-drawer #sideNav mode="side" opened="true" position="end" >
+        Drawer content
+      </mat-drawer> -->
+    
+        <button class="bellbtn" (click)="sideNav.toggle()" mat-icon-button><i  class="bx bxs-bell-ring"></i> <span *ngIf="length2>0||length3>0" [matBadge]="length2+length3" matBadgeColor="warn" ></span></button>
+        <!-- <button (click)="onTogglePosition(nav_position)" mat-button>Toggle Position {{ nav_position }}</button> -->
+      
+    
+   
+  
+
+      <button matTooltip="More" id="sidebarbtn" mat-button (click)="drawer.toggle()"> <i
+          class="bx bx-menu"></i></button>
+    
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<!-- <div class="sidebar close">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">CodingLab</span>
+    </div>
+    <ul class="nav-links">
+    
+        <div class="iocn-link">
+          <i class='bx bxs-user-circle' ></i>
+        </div>
+        <ul class="sub-menu">
+          <div class="card-container">
+            <img class="round" src="{{todolist1.profileimg}}" alt="user" />
+            <h3>{{todolist1.firstname}}</h3>
+            <h6>{{todolist1.phonenumber}}</h6>
+            <div class="buttons">
+              <button class="primary" routerLink="/viewprofile">
+                View profile
+              </button>
+              <br>
+              <button class="primary ghost" routerLink="/editprofile">
+                Edit profile
+              </button>
+            </div>
+          </div>
+        </ul>
+      
+     
+    
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">Category</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+        <a class="link_name">Category</a>
+        <a (click)="ngOnInit()">All</a>
+        <a (click)="highpri()" >High Priority</a>
+        <a (click)="mediumpri()">Medium Priority</a>
+        <a (click)="lowpri()">Low Priority</a>
+        </ul>
+      
+    
+        <div>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-calendar'></i>
+            <span class="link_name">Date</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+        <a class="link_name" href="#">Date</a>
+        <input mat-input type="date" color="white" class="date" id="start" name="trip-start" (change)="searchByDate()"  placeholder="DD/MM/YYYY"  min="01/01/2000" max="31/12/2100" [(ngModel)]="date" >
+          <button mat-icon-button type="button" (click)="searchByDate()"><i class="bi bi-send"></i></button> -->
+
+<!-- </ul>
+      </div>
+      
+    
+        <a>
+          <i class='bx bx-plus'></i> -->
+<!-- <span class="link_name">Add</span> -->
+<!-- </a>
+        <ul class="sub-menu blank">
+        <a class="link_name" routerLink="/addtodo">Add</a>
+        </ul>
+      
+    
+        <a>
+          <i class='bx bx-search-alt'></i>
+          <span class="link_name" ></span>
+        </a>
+        <ul class="sub-menu blank">
+        <a class="link_name" (click)="searchbar()" >Search</a>
+        </ul>
+      
+    
+        <a href="#">
+          <i class='bx bx-archive-in'></i>
+          <span class="link_name" >Archive</span>
+        </a>
+        <ul class="sub-menu blank">
+        <a class="link_name" href="#">Archive</a>
+        <a (click)="pending()">Pending</a>
+        <a (click)="complited()">Complited</a>
+
+        </ul>
+      
+    
+    <div class="profile-details">
+      <div class="profile-content"> -->
+<!--<img src="image/profile.jpg" alt="profileImg">-->
+<!-- </div>
+      <div class="name-job">
+        <div class="profile_name">Prem Shahi</div>
+        <div class="job">Web Desginer</div>
+      </div>
+      <i class='bx bx-log-out' ></i>
+    </div>
+  
+
+    <a>
+      <i class='bx bx-support'></i> -->
+<!-- <span class="link_name">Add</span> -->
+<!-- </a>
+    <ul class="sub-menu blank">
+    <a class="link_name" routerLink="/service">service</a>
+    </ul>
+  
+
+    <a>
+      <i class='bx bx-log-out' routerlink="/notification"></i>
+      <span class="link_name" >logout</span>
+    </a>
+    <ul class="sub-menu blank"  >
+    <a class="link_name" (click)="logout()" >Log Out</a>
+    </ul>
+  
+</ul>
+  </div>
+</div> -->

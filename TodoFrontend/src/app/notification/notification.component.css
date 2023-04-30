@@ -1,0 +1,316 @@
+
+
+  .heading-secondary {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: transparent;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    color: black;
+  }
+  
+  .btn, .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:hover::after {
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+            transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+  
+  .btn:active, .btn:focus {
+    outline: none;
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn--white {
+    background: transparent;
+    color: #777;
+  }
+  
+  .btn--white::after {
+    background: transparent;
+  }
+  
+ 
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+  }
+  .profile-image {
+    position: relative;
+    width: 120px;
+    margin: auto;
+  }
+  
+  .profile-image > img {
+    margin-top: -50px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  #btn1{
+    margin-right: 50px;
+    color: #fff;
+    background-color: #9861c2;
+  }
+ 
+  .card__side {
+    height: 695px;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* margin-left:400px;
+    margin-top:130px; */
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .card__side--front {
+    background-color: yellowgreen;
+  }
+  
+  .card__side--front-1 {
+    background: linear-gradient(-45deg, #03f4d0, #64b5f6);
+  }
+  
+  .card__side--front-2 {
+    background: linear-gradient(-45deg, #21f3db, #61bdff);
+  }
+  
+  .card__side--front-3 {
+    background: linear-gradient(-45deg, #24ffc5, #9a4eff);
+  }
+  
+  .card__side--back {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  
+  .card__side--back-1 {
+    background: linear-gradient(-45deg, #6489f6, #03f4b4);
+  }
+  
+  .card__side--back-2 {
+    background: linear-gradient(-45deg, #61e5ff, #21f3bf);
+  }
+  
+  .card__side--back-3 {
+    background: linear-gradient(-45deg, #9a4eff, #24afff);
+  }
+  
+  .card:hover .card__side--front-1,
+  .card:hover .card__side--front-2,
+  .card:hover .card__side--front-3 {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+  
+  .card:hover .card__side--back {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  
+  .card__title {
+    height: 20rem;
+    padding: 4rem 2rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .card__title--1 .fas {
+    font-size: 5rem;
+  }
+  
+  .card__title--2 .fas {
+    font-size: 5rem;
+  }
+  
+  .card__title--3 .fas {
+    font-size: 5rem;
+  }
+  
+  .card__heading {
+    font-size: 3rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    width: 75%;
+  }
+  .card__heading1{
+    font-size: 3rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    width: 75%;
+    justify-content: center;
+  }
+  /* #size{
+    position:absolute;
+    top: 120px;
+    left: 650px;
+    width: 550px;
+    height: 700px;
+    animation-duration: 3000ms;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  
+    
+    
+  } */
+  
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  
+  .card__details {
+    padding: 0 2rem 2rem;
+  }
+  
+  .card__details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .card__details ul li {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .card__details ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+  
+  .card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem;
+  }
+  
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+  
+  .row {
+    max-width: 114rem;
+    margin: 0 auto;
+  }
+  
+  .row:not(:last-child) {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .row [class^="col-"] {
+    float: left;
+  }
+  
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 6rem;
+  }
+  
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3);
+  }
+
+  #notifimage{
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    margin-top: 150px;
+    width: 300px;
+    height: 300px;
+  }
+  #crd1{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    justify-content: center;
+  }
+  #alert{
+    position: absolute;
+    margin-left: 35px;
+    margin-top: 100px;
+  }
+  #profile{
+    margin-top: 20px;
+  }
+  
+  

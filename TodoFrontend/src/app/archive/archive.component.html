@@ -1,0 +1,80 @@
+
+<div id="body">
+
+   
+
+
+  <div class="bar">
+    <ul>
+      <li><h3>Archive</h3></li>
+      <li><p>Date : {{dates}}</p></li>
+      
+      <li><p>Priority : {{cat}}</p></li>
+    </ul>
+   </div>
+
+
+   <div  class = "containers">
+    <div class="row">
+  
+    <div class = "col-md-2" id="card" *ngFor="let lists of cont">
+      <div class = image  (click)="openDialog3('0ms', '0ms',lists)">
+        <img href = "#" src ="../../assets/Avatar/task.png"><br>
+       <div class="headsing" >
+        <h5>{{lists.title}}</h5>
+        </div>
+      </div>
+      <div class = content>
+       
+       <p>Date:{{lists.date}}</p>
+       <p>Time:{{lists.time}}</p>
+       <div [ngSwitch]="lists.priority">
+        <p *ngSwitchCase="'High Priority'"  class="badge bg-danger">{{lists.priority}}</p>
+        <p *ngSwitchCase="'Medium Priority'" class="badge bg-warning" >{{lists.priority}}</p>
+        <p *ngSwitchCase="'Low Priority'"  class="badge bg-success">{{lists.priority}}</p>
+        </div>
+       <!-- <p>priority:{{lists.priority}}</p> -->
+       <p>status:{{lists.status}}</p>
+       <i class="bi bi-pencil-square"></i>
+       <button mat-icon-button color="primary" (click)="delete(lists.contentid)"><i class='bx bxs-trash'></i></button>
+       <button mat-icon-button color="primary" (click)="openDialog2('0ms', '0ms',lists)"><i class="bx bx-plus"></i></button> 
+       
+      </div>
+      </div>
+    </div>
+      
+        
+  </div>
+</div>
+
+    <!-- <app-notification id="notification" *ngIf="true" [timelist]="timelist"></app-notification> -->
+  <!-- <div class = "container row">
+  
+    <div class = "col-md-3" id="card" *ngFor="let lists of cont">
+      <div class = image  routerLink="../detail/{{lists?.contentid}}">
+        <img href = "#" src ="../../assets/Avatar/cat.png"><br>
+       <div class="headsing" >
+        <h5>{{lists.title}}</h5>
+        </div>
+      </div>
+      <div class = content>
+       
+       <p>Date:{{lists.date}}</p>
+       <p>Time:{{lists.time}}</p>
+       <div [ngSwitch]="lists.priority">
+        <p *ngSwitchCase="'High Priority'"  class="badge bg-danger">{{lists.priority}}</p>
+        <p *ngSwitchCase="'Medium Priority'" class="badge bg-warning" >{{lists.priority}}</p>
+        <p *ngSwitchCase="'Low Priority'"  class="badge bg-success">{{lists.priority}}</p>
+      </div>
+       <p>status:{{lists.status}}</p>
+       <i class="bi bi-pencil-square"></i>
+       <button mat-icon-button color="primary" (click)="delete(lists.contentid)"><i class='bx bxs-trash'></i></button>
+       <button mat-icon-button color="primary" routerLink="../edit/{{lists?.contentid}}"><mat-icon>bx-plus</mat-icon></button>
+       
+      </div>
+      </div> -->
+      
+        
+   
+  
+  
